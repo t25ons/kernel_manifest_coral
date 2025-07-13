@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote  name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
+  <remote  name="t25ons" fetch="https://github.com/t25ons" />
   <default revision="android-msm-coral-4.14-android13"
     remote="aosp" sync-j="4" />
 
-  <project path="private/msm-google" name="kernel/msm" groups="partner">
+  <project path="private/msm-google" name="kernel/msm" remote="t25ons" revision="android-msm-coral-4.14-android13">
     <linkfile dest="build.config" src="build.config.no-cfi"/>
     <linkfile dest="build_floral.sh" src="build_floral.sh"/>
     <linkfile dest="build_sunfish.sh" src="build_sunfish.sh"/>
